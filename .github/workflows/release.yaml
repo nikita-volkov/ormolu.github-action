@@ -26,7 +26,7 @@ jobs:
           tags: ghcr.io/${{ github.repository }}:${{ github.sha }}
 
       - name: Update action.yml
-        uses: fjogeleit/yaml-update-action@v0.12.0
+        uses: fjogeleit/yaml-update-action@v0.12.3
         with:
           valueFile: action.yml
           propertyPath: runs.image
@@ -50,7 +50,7 @@ jobs:
           commit_sha: ${{ steps.update-image-ref.outputs.commit_hash }}
 
       - name: Release
-        uses: ncipollo/release-action@v1.10.0
+        uses: ncipollo/release-action@v1.12.0
         with:
           token: ${{ github.token }}
           commit: ${{ github.ref_name }}
