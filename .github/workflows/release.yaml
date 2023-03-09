@@ -26,7 +26,7 @@ jobs:
           tags: ghcr.io/${{ github.repository }}:${{ github.sha }}
 
       - name: Update action.yml
-        uses: fjogeleit/yaml-update-action@v0.10.0
+        uses: fjogeleit/yaml-update-action@v0.12.0
         with:
           valueFile: action.yml
           propertyPath: runs.image
