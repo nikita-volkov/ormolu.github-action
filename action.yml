@@ -2,4 +2,4 @@ name: Format code with Ormolu
 author: Nikita Volkov
 runs:
   using: docker
-  image: docker://ghcr.io/nikita-volkov/ormolu.github-action:abd0792288e2d65f1befa98f7bb0c4a3d2bd42fc
+  image: docker://ghcr.io/nikita-volkov/ormolu.github-action:635f38bd59bcec23671f55a0544df034a77850ad
