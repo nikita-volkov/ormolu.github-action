@@ -1,0 +1,7 @@
+name: Format code with Ormolu
+author: Nikita Volkov
+outputs:
+  output:
+    description: Command output
+runs:
+  using: docker
