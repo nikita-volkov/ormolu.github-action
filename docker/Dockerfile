@@ -1,12 +1,15 @@
 FROM ubuntu:22.04
 
 RUN apt-get update
-RUN apt-get install cabal-install -y
-
-RUN cabal update
-RUN cabal install ormolu-0.5.3.0 --install-method=copy --installdir=/usr/local/bin
-
-RUN rm -rf ~/.cabal
+RUN apt-get install wget unzip -y
+RUN \
+  mkdir /tmp/ormolu && \
+  cd /tmp/ormolu && \
+  wget -q https://github.com/tweag/ormolu/releases/download/0.5.3.0/ormolu-Linux.zip && \
+  unzip ormolu-Linux.zip && \
+  rm ormolu-Linux.zip && \
+  chmod +x ormolu && \
+  mv ormolu /usr/local/bin/
 
 COPY entrypoint.bash /usr/local/bin/
 
