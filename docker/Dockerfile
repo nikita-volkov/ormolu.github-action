@@ -5,7 +5,7 @@ RUN apt-get install wget unzip -y
 RUN \
   mkdir /tmp/ormolu && \
   cd /tmp/ormolu && \
-  wget -q https://github.com/tweag/ormolu/releases/download/0.5.3.0/ormolu-Linux.zip && \
+  wget -q https://github.com/tweag/ormolu/releases/download/0.6.0.1/ormolu-Linux.zip && \
   unzip ormolu-Linux.zip && \
   rm ormolu-Linux.zip && \
   chmod +x ormolu && \
