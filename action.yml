@@ -1,5 +1,11 @@
 name: Format code with Ormolu
 author: Nikita Volkov
+inputs:
+  dirs:
+    description:
+      Space-separated list of dirs to format. If not specified, all .hs files will be formatted (excluding dist-newstyle and .git directories)
+    required: false
+    default: ''
 runs:
   using: docker
   image: docker://ghcr.io/nikita-volkov/ormolu.github-action:dc04855e94a9fb3361886e6ffa8c0bfa892bdc69
