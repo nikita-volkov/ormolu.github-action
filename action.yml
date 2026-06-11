@@ -7,4 +7,4 @@ inputs:
     default: ''
 runs:
   using: docker
-  image: docker://ghcr.io/nikita-volkov/ormolu.github-action:2ce13f39a36fd167006548e9781942bbb27c1e1d
+  image: docker://ghcr.io/nikita-volkov/ormolu.github-action:2233f0e2087a3e7c10f84ddf96aa2fabc7ef8a17
